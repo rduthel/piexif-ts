@@ -2,8 +2,13 @@
   "name": "piexif-ts",
   "version": "2.1.0",
   "description": "Read and write exif with typescript!",
-  "main": "dist/piexif.js",
-  "module": "dist/piexif.es.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/piexif.js"
+    }
+  },
   "browser": "dist/piexif.browser.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -16,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/holwech/piexif-ts.git"
+    "url": "git+https://github.com/rduthel/piexif-ts.git"
   },
   "keywords": [
     "jpeg",
@@ -41,10 +46,11 @@
   "author": "hMatoba, Joachim Holwech",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/holwech/piexif-ts/issues"
+    "url": "https://github.com/rduthel/piexif-ts/issues"
   },
-  "homepage": "https://github.com/holwech/piexif-ts",
+  "homepage": "https://github.com/rduthel/piexif-ts",
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "eslint": "^6.5.1",
@@ -63,6 +69,5 @@
     "rollup-plugin-typescript2": "^0.16.1",
     "ts-loader": "^4.5.0",
     "typescript": "^3.0.1"
-  },
-  "dependencies": {}
+  }
 }
